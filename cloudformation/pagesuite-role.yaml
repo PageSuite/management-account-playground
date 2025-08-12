@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'CloudFormation template to create PageSuiteRole with trust and permission policies'
+
+Parameters:
+  TrustedAccountId:
+    Type: String
+    Description: AWS Account ID that contains the ClientAccessRole user
+    AllowedPattern: '^[0-9]{12}$'
+    ConstraintDescription: Must be a valid 12-digit AWS Account ID
+
+Resources:
+  PageSuiteRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: PageSuiteRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: !Sub 'arn:aws:iam::${TrustedAccountId}:role/ClientAccessRole'
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: PageSuitePermissions
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: 's3:*'
+                Resource: '*'

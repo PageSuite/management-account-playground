@@ -1,0 +1,113 @@
+{
+    "version": "0",
+    "id": "0e6db380-e2cd-b98a-7917-662fec03b010",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.servicecatalog",
+    "account": "447677561119",
+    "time": "2025-08-13T13:24:26Z",
+    "region": "eu-west-1",
+    "resources": [],
+    "detail": {
+        "eventVersion": "1.08",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROAWQO5JPEPSTW6CQTI7:kevin.barclay@pagesuite.com",
+            "arn": "arn:aws:sts::447677561119:assumed-role/AWSReservedSSO_AdministratorAccess_1bafa473f366ea20/kevin.barclay@pagesuite.com",
+            "accountId": "447677561119",
+            "accessKeyId": "ASIAWQO5JPEP3FW7G2ZQ",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROAWQO5JPEPSTW6CQTI7",
+                    "arn": "arn:aws:iam::447677561119:role/aws-reserved/sso.amazonaws.com/eu-west-1/AWSReservedSSO_AdministratorAccess_1bafa473f366ea20",
+                    "accountId": "447677561119",
+                    "userName": "AWSReservedSSO_AdministratorAccess_1bafa473f366ea20"
+                },
+                "webIdFederationData": {},
+                "attributes": {
+                    "creationDate": "2025-08-13T10:31:45Z",
+                    "mfaAuthenticated": "false"
+                }
+            }
+        },
+        "eventTime": "2025-08-13T13:24:26Z",
+        "eventSource": "servicecatalog.amazonaws.com",
+        "eventName": "ProvisionProduct",
+        "awsRegion": "eu-west-1",
+        "sourceIPAddress": "62.232.113.250",
+        "userAgent": "aws-sdk-js/3.864.0 ua/2.1 os/darwin#24.5.0 lang/js md/nodejs#22.14.0 api/service-catalog#3.864.0 m/E,n",
+        "requestParameters": {
+            "provisioningArtifactId": "pa-onj47jlgbqpwe",
+            "productId": "prod-6f6q5myc3kzmy",
+            "tags": [
+                {
+                    "key": "ps:accountId",
+                    "value": "53e76d7b-0ea3-4ed6-97be-ff78f7da21a7"
+                },
+                {
+                    "key": "ps:environment",
+                    "value": "Dev"
+                }
+            ],
+            "provisioningParameters": [
+                {
+                    "value": "53e76d7b-0ea3-4ed6-97be-ff78f7da21a7_Dev",
+                    "key": "AccountName"
+                },
+                {
+                    "value": "clients+53e76d7b-0ea3-4ed6-97be-ff78f7da21a7+root@pagesuite.com",
+                    "key": "AccountEmail"
+                },
+                {
+                    "value": "clients+53e76d7b-0ea3-4ed6-97be-ff78f7da21a7+admin@pagesuite.com",
+                    "key": "SSOUserEmail"
+                },
+                {
+                    "value": "Admin",
+                    "key": "SSOUserFirstName"
+                },
+                {
+                    "value": "acc_53e76d7b-0ea3-4ed6-97be-ff78f7da21a7",
+                    "key": "SSOUserLastName"
+                },
+                {
+                    "value": "Clients-Dev (ou-s4i4-0t2m7sl7)",
+                    "key": "ManagedOrganizationalUnit"
+                }
+            ],
+            "provisionToken": "2d869132-a1f4-43eb-acd4-b69330b049e9",
+            "provisionedProductName": "53e76d7b-0ea3-4ed6-97be-ff78f7da21a7_Dev"
+        },
+        "responseElements": {
+            "recordDetail": {
+                "productName": "AWS Control Tower Account Factory",
+                "provisioningArtifactName": "AWS Control Tower Account Factory",
+                "recordId": "rec-mm5p4gc5pm77s",
+                "provisioningArtifactId": "pa-onj47jlgbqpwe",
+                "pathId": "lpv3-hb4a7cpgdpthu",
+                "productId": "prod-6f6q5myc3kzmy",
+                "createdTime": "Aug 13, 2025 1:24:26 PM",
+                "updatedTime": "Aug 13, 2025 1:24:26 PM",
+                "recordType": "PROVISION_PRODUCT",
+                "provisionedProductName": "53e76d7b-0ea3-4ed6-97be-ff78f7da21a7_Dev",
+                "recordErrors": [],
+                "status": "CREATED",
+                "recordTags": [],
+                "provisionedProductId": "pp-k675giseqfsqw",
+                "provisionedProductType": "CONTROL_TOWER_ACCOUNT"
+            }
+        },
+        "requestID": "b21252cd-433d-4b7c-b5c8-e67eeabec772",
+        "eventID": "c77b73a5-a31f-487c-87d3-0a5e0375de87",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "447677561119",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "servicecatalog.eu-west-1.amazonaws.com"
+        }
+    }
+}

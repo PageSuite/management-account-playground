@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'CloudFormation template to create an IAM role that can only assume PageSuiteRole from any account'
+
+Resources:
+  ClientAccessRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: ClientAccessRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: AssumePageSuiteRolePolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - sts:AssumeRole
+                Resource: 'arn:aws:iam::*:role/PageSuiteRole'
+
+Outputs:
+  RoleArn:
+    Description: ARN of the created IAM role
+    Value: !GetAtt ClientAccessRole.Arn
+    Export:
+      Name: !Sub '${AWS::StackName}-RoleArn'

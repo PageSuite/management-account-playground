@@ -1,0 +1,20 @@
+{
+    "version": "0",
+    "id": "2d8242c1-5ad3-18a9-1389-10832a9386ee",
+    "detail-type": "CloudFormation StackSet StackInstance Status Change",
+    "source": "aws.cloudformation",
+    "account": "447677561119",
+    "time": "2025-08-14T14:52:32Z",
+    "region": "eu-west-1",
+    "resources": [
+        "arn:aws:cloudformation:eu-west-1:447677561119:stackset/PageSuiteRole-Dev-StackSet:bc117dff-3100-48ae-8121-4f3623eb53f2"
+    ],
+    "detail": {
+        "stack-set-arn": "arn:aws:cloudformation:eu-west-1:447677561119:stackset/PageSuiteRole-Dev-StackSet:bc117dff-3100-48ae-8121-4f3623eb53f2",
+        "stack-id": "arn:aws:cloudformation:eu-west-1:447053375939:stack/StackSet-PageSuiteRole-Dev-StackSet-44d799e7-7237-42db-a89d-4d63ac54de53/35833860-78f8-11f0-b850-023a54b417b5",
+        "status-details": {
+            "status": "CURRENT",
+            "detailed-status": "SUCCEEDED"
+        }
+    }
+}

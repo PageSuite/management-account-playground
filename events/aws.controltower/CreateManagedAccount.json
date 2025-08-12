@@ -1,0 +1,47 @@
+{
+    "version": "0",
+    "id": "5c618a37-04c5-52f4-b2c5-bcb442f82927",
+    "detail-type": "AWS Service Event via CloudTrail",
+    "source": "aws.controltower",
+    "account": "447677561119",
+    "time": "2025-08-12T16:03:45Z",
+    "region": "eu-west-1",
+    "resources": [],
+    "detail": {
+        "eventVersion": "1.11",
+        "userIdentity": {
+            "accountId": "447677561119",
+            "invokedBy": "AWS Internal"
+        },
+        "eventTime": "2025-08-12T16:03:45Z",
+        "eventSource": "controltower.amazonaws.com",
+        "eventName": "CreateManagedAccount",
+        "awsRegion": "eu-west-1",
+        "sourceIPAddress": "AWS Internal",
+        "userAgent": "AWS Internal",
+        "requestParameters": null,
+        "responseElements": null,
+        "eventID": "30a79d4a-b9b6-4845-b5ff-ad9329f15159",
+        "readOnly": false,
+        "eventType": "AwsServiceEvent",
+        "managementEvent": true,
+        "recipientAccountId": "447677561119",
+        "serviceEventDetails": {
+            "createManagedAccountStatus": {
+                "organizationalUnit": {
+                    "organizationalUnitName": "Clients-Dev",
+                    "organizationalUnitId": "ou-s4i4-0t2m7sl7"
+                },
+                "account": {
+                    "accountName": "ScriptedTestAccount2-Dev",
+                    "accountId": "106342565369"
+                },
+                "state": "SUCCEEDED",
+                "message": "AWS Control Tower successfully created an enrolled account.",
+                "requestedTimestamp": "2025-08-12T15:55:38+0000",
+                "completedTimestamp": "2025-08-12T16:03:45+0000"
+            }
+        },
+        "eventCategory": "Management"
+    }
+}
